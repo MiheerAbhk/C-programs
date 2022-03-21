@@ -1,0 +1,44 @@
+/* Concept: Branching and logical expressions
+Time Calculator: Design a program that asks the user to enter a number of seconds, and works as follows:
+1. There are 60 seconds in a minute. If the number of seconds entered by the user is greater than or equal to 60, the program should display the number of minutes in that many seconds.
+2. There are 3,600 seconds in an hour. If the number of seconds entered by the user is greater than or equal to 3,600, the program should display the number of hours in that many seconds.
+3. There are 86,400 seconds in a day. If the number of seconds entered by the user is greater than or equal to 86,400, the program should display the number of days in that many seconds.
+*/
+
+//Title: Time calculator
+//Author: Miheer
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int seconds;
+    printf(" Enter seconds : ");
+    scanf("%d", &seconds);
+    
+    //condition 1 >=60 : decision 
+    if((seconds>=60)&&(seconds<3600))
+    {
+        printf(" Number of min for given seconds: %d", seconds/60);
+    }
+    else if((seconds>=3600)&&(seconds<86400))
+    {
+        printf(" Number of hour for given seconds: %d", seconds/3600);    
+        
+    }
+    else if(seconds>=86400)
+    {
+        printf(" Number of days for given seconds: %d", seconds/86400);    
+        
+    }
+    else
+    {
+        printf("sorry, no conversion is allowed");
+    }
+    
+    
+    return 0; //Exit
+    
+}
